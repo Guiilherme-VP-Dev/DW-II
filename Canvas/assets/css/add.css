@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'font-car';
+    src: url('../font/62dragz/62DRAGZ.otf'); /* Ajuste o caminho se necessário */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    background: black; /* Cor de fundo da página */
+}

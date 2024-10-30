@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'font-car';
+    src: url(../font/62dragz/62DRAGZ.otf);
+}
+
+@font-face {
+    font-family: 'bebas';
+    src: url(../font/bebas/Bebas-Regular.otf);
+}
+body{
+    background:black;
+}
+.borderLine::after, .borderLine::before {
+    content: '';
+    position: absolute;
+    top: -30%; /* Ajuste o valor conforme necessário */
+    left: -30%; /* Ajuste o valor conforme necessário */
+    width: 600px; /* Aumenta a espessura */
+    height: 600px; /* Aumenta a espessura */
+    background: linear-gradient(0deg, transparent, transparent, #5e5e5e5e, #5e5e5e5e, #5e5e5e5e);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.borderLine::before {
+    animation-delay: -1.5s;
+}
+
+.borderLine::after {
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box form {
+    position: absolute;
+    inset: 4px;
+    background: black;
+    padding: 60px 50px;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box form h2 {
+    color: #E6E3E3;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: 'font-car';
+}
+
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: black;
+    border: 2px solid #2b2c37;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: hsla(0, 0%, 0%, 0.1) 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
+    transition: all 0.35s ease-out;
+    position: relative;
+    margin-top: 40px;
+}
+
+.input-wrapper:has(input:focus) {
+    border: 2px solid #5e5e5e5e;
+    box-shadow: 0 0 120px #5e5e5e;
+}
+
+.input-wrapper > svg {
+    position: absolute;
+    right: 1rem;
+    width: 28px;
+    flex-shrink: 0;
+    transition: 0.25s;
+}
+
+svg > path {
+    fill: none;
+    stroke: #727884;
+}
+
+.input:focus + svg > path {
+    stroke: none;
+    fill: #5e5e5e5e;
+}
+
+.input:focus + svg {
+    scale: 1.2;
+}
+
+.input {
+    width: calc(100% - 70px);
+    font-size: 18px;
+    padding: 1rem;
+    background: transparent;
+    font-family: 'bebas';
+    border: none;
+    color: #E6E3E3;
+    outline: none;
+}
+
+.input::placeholder {
+    color: #727884;
+    font-family: 'bebas';
+}
+
+.box form .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.box form .links a {
+    font-family: 'bebas';
+    color: #8f8f8f;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+    color: #E6E3E3;
+}
+
+.box form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 12px 30px;
+    background: #E6E3E3;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 150px;
+    margin-top: 15px;
+    align-self: center;
+}
+
+.box form input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 500px;
+    background: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(0deg, transparent, transparent, #fff, #fff, #fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(0deg, transparent, transparent, #fff, #fff, #fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}

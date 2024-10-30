@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'font-car';
+    src: url('../font/62dragz/62DRAGZ.otf'); /* Ajuste o caminho se necessário */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    background: black; /* Cor de fundo da página */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza a barra de navegação */
+    background-color: #fff; /* Fundo para a nav bar */
+    padding: 20px 0; /* Ajuste de padding */
+    z-index: 999; /* Mantém a nav bar acima do conteúdo */
+    transition: padding 0.5s ease, background-color 0.5s ease, color 0.5s ease; /* Transição suave */
+}
+
+header.sticky {
+    padding: 25px 0; /* Reduz o padding quando sticky */
+    background: black; /* Muda a cor de fundo ao rolar */
+    color: #fff; /* Cor do texto quando sticky */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaço entre os links */
+}
+
+.menu a {
+    font-size: 30px; /* Tamanho da fonte dos links */
+    color: #000; /* Cor dos links padrão (quando fundo é branco) */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s; /* Transição suave para a cor */
+    position: relative; /* Para posicionar o span abaixo */
+    font-family: 'font-car'; /* Usando a fonte personalizada */
+}
+
+/* Cor do texto quando sticky */
+header.sticky .menu a {
+    color: #fff; /* Cor dos links quando a navbar está preta */
+}
+
+.menu a:hover {
+    color: #5e5e5e; /* Cor ao passar o mouse */
+}
+.menu img{
+    width: 75px;
+}
